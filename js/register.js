@@ -21,7 +21,7 @@ function register() {
         alert("Please Type Your Info!");
     } else if (username === "" || password === "") {
         alert("Please Type Your Info!");
-    } else if (username === "&nbsp;") {
+    } else if (username === "&nbsp;" || password === "&nbsp;") {
         alert("Please Type Your Info!");
     } else {
         alert("Sign Up Sucessfully!");

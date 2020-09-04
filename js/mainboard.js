@@ -9,7 +9,10 @@ expenses.drawExpensesTable(expenses.expensesDateArr, expenses.expensesTitleArr, 
 
 function addIncome() {
     income.sumIncome = 0;
-    if (income.addIncomeDate.value === "" || income.addIncomeTitle.value === "" || income.addIncomeTitle.value === " " || income.addIncomeMoney.value === "") {
+    if (income.addIncomeDate.value === ""
+        || income.addIncomeTitle.value === ""
+        || income.addIncomeTitle.value === " "
+        || income.addIncomeMoney.value === "") {
         alert("Please Input All Income Info!");
     } else {
         income.incomeDateArr.push(income.addIncomeDate.value);
@@ -28,7 +31,10 @@ function addIncome() {
 
 function addExpenses() {
     expenses.sumExpenses = 0;
-    if (expenses.addExpensesDate.value === "" || expenses.addExpensesTitle.value === "" || expenses.addExpensesTitle.value === " " || expenses.addExpensesMoney.value === "") {
+    if (expenses.addExpensesDate.value === ""
+        || expenses.addExpensesTitle.value === ""
+        || expenses.addExpensesTitle.value === " "
+        || expenses.addExpensesMoney.value === "") {
         alert("Please Input All Expense Info!");
     } else {
         expenses.expensesDateArr.push(expenses.addExpensesDate.value);
