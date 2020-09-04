@@ -5,7 +5,7 @@ function checkLogin() {
     userCheck.loadData();
     if (userCheck.checkLogin(username, password)) {
         alert("Login Sucessfully!");
-        location.replace("mainboard.html");
+        location.replace("..html/mainboard.html");
     } else {
         alert("Wrong Info! Please Login Agian");
     }
