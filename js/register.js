@@ -17,7 +17,6 @@ function register() {
     let password = document.getElementById("password").value;
     let user = new User(username, password);
     let userManage = new UserManage();
-
     if (!checkCharacter(username)) {
         alert("Please Type Your Info!");
     } else if (username === "" || password === "") {
@@ -28,7 +27,6 @@ function register() {
         alert("Sign Up Sucessfully!");
         location.replace("html/login.html");
     }
-
     userManage.addUser(user);
     userManage.saveData();
 }
