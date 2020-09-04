@@ -5,3 +5,6 @@
 <b>Lớp:</b> C0720I1
 <br>
 <b>GitHub:</b> theanh111
+<br>
+<h2>Module 1: Case Study</h2>
+<p>Name: Personal Finance Management</p>
