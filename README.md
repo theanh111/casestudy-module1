@@ -7,4 +7,4 @@
 <b>GitHub:</b> theanh111
 <br>
 <h2>Module 1: Case Study</h2>
-<p>Name: Personal Finance Management</p>
+<b>Tên dự án:</b> Personal Finance Management
