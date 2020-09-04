@@ -46,12 +46,22 @@ function addExpenses() {
 }
 
 function editIncome(index) {
-    // document.getElementById("name" + i).innerHTML = "<td><input type='text' id=\"changeName" + i + "\" value=\"" + idolArray[i].fullName + "\"/></td>";
-    document.getElementById("incomeDate" + index).innerHTML = "<td><input type='date' id=\"changeName" + index + "\" value=\"" + income.incomeDateArr[index] + "\"/></td>";
+    income.sumIncome = 0;
+    let editDate = prompt("Edit Your Income Date: ", income.incomeDateArr[index]);
+    let editTitle = prompt("Edit Your Income Title: ", income.incomeTitleArr[index]);
+    let editMoney = prompt("Edit Your Income Money: ", income.incomeMoneyArr[index]);
+    income.incomeDateArr[index] = editDate;
+    income.incomeTitleArr[index] = editTitle;
+    income.incomeMoneyArr[index] = editMoney;
     income.drawIncomeTable(income.incomeDateArr, income.incomeTitleArr, income.incomeMoneyArr);
+    for (let i = 0; i < income.incomeMoneyArr.length; i++) {
+        income.sumIncome += income.incomeMoneyArr[i];
+    }
+    balance.calculate(+income.sumIncome, +expenses.sumExpenses);
 }
 
 function deleteIncome(index) {
+    income.sumIncome = 0;
     let deleteConfirm = confirm("Are you sure about that?!!");
     if (deleteConfirm) {
         income.incomeDateArr.splice(index, 1);
@@ -59,18 +69,30 @@ function deleteIncome(index) {
         income.incomeMoneyArr.splice(index, 1);
         alert("You have deleted your income!");
     }
+    for (let i = 0; i < income.incomeMoneyArr.length; i++) {
+        income.sumIncome += income.incomeMoneyArr[i];
+    }
+    balance.calculate(+income.sumIncome, +expenses.sumExpenses);
     income.drawIncomeTable(income.incomeDateArr, income.incomeTitleArr, income.incomeMoneyArr);
 }
 
 function editExpenses(index) {
+    expenses.sumExpenses = 0;
+    let editDate = prompt("Edit Your Expense Date: ", expenses.expensesDateArr[index]);
     let editTitle = prompt("Edit Your Expense Title: ", expenses.expensesTitleArr[index]);
     let editMoney = prompt("Edit Your Expense Money: ", expenses.expensesMoneyArr[index]);
+    expenses.expensesDateArr[index] = editDate;
     expenses.expensesTitleArr[index] = editTitle;
     expenses.expensesMoneyArr[index] = editMoney;
+    for (let i = 0; i < expenses.expensesMoneyArr.length; i++) {
+        expenses.sumExpenses += expenses.expensesMoneyArr[i];
+    }
+    balance.calculate(+income.sumIncome, +expenses.sumExpenses);
     expenses.drawExpensesTable(expenses.expensesDateArr, expenses.expensesTitleArr, expenses.expensesMoneyArr);
 }
 
 function deleteExpenses(index) {
+    expenses.sumExpenses = 0;
     let deleteConfirm = confirm("Are you sure about that?!!");
     if (deleteConfirm) {
         expenses.expensesDateArr.splice(index, 1);
@@ -78,5 +100,9 @@ function deleteExpenses(index) {
         expenses.expensesMoneyArr.splice(index, 1);
         alert("You Have Deleted Your Expense!");
     }
+    for (let i = 0; i < expenses.expensesMoneyArr.length; i++) {
+        expenses.sumExpenses += expenses.expensesMoneyArr[i];
+    }
+    balance.calculate(+income.sumIncome, +expenses.sumExpenses);
     expenses.drawExpensesTable(expenses.expensesDateArr, expenses.expensesTitleArr, expenses.expensesMoneyArr);
 }
