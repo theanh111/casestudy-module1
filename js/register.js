@@ -25,7 +25,7 @@ function register() {
         alert("Please Type Your Info!");
     } else {
         alert("Sign Up Sucessfully!");
-        location.replace("html/login.html");
+        location.replace("login.html");
     }
     userManage.addUser(user);
     userManage.saveData();
