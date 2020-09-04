@@ -71,6 +71,8 @@ function Balance() {
         let balanceMoney = incomeSum - expensesSum;
         if (isNaN(balanceMoney)) {
             document.getElementById("balanceMoney").innerHTML = "+" + incomeSum + "$";
+        } else if (isNaN(balanceMoney)) {
+            document.getElementById("balanceMoney").innerHTML = "-" + expensesSum + "$";
         } else if (balanceMoney <= 0) {
             document.getElementById("balanceMoney").innerHTML = balanceMoney + "$";
         } else {

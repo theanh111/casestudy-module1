@@ -78,5 +78,5 @@ function deleteExpenses(index) {
         expenses.expensesMoneyArr.splice(index, 1);
         alert("You Have Deleted Your Expense!");
     }
-    expenses.drawExpensesTable(expenses.expensesTitleArr, expenses.expensesMoneyArr);
+    expenses.drawExpensesTable(expenses.expensesDateArr, expenses.expensesTitleArr, expenses.expensesMoneyArr);
 }
