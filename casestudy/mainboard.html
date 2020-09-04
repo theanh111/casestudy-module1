@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Tree - Ứng dụng quản lý tiêu chi cá nhân</title>
+    <link rel="stylesheet" href="css/mainboard.css">
+</head>
+<body>
+<h1>Personal Finance Management</h1>
+<a target="_blank" href="index.html"><img src="images/logo.png"/></a>
+<div>
+    <div class="inputDiv">
+        <h2>Income</h2>
+        <div class="div1">
+            <input type="date" id="addIncomeDate">
+            <input type="text" id="addIncomeTitle" placeholder="Title"/>
+            <input type="number" id="addIncomeMoney" placeholder="0.000"/><span>$</span>
+            <button onclick="addIncome()">Add</button>
+        </div>
+        <h2>Expenses</h2>
+        <div class="div2">
+            <input type="date" id="addExpensesDate">
+            <input type="text" id="addExpensesTitle" placeholder="Title"/>
+            <input type="number" id="addExpensesMoney" placeholder="0.000"/><span>$</span>
+            <button onclick="addExpenses()">Add</button>
+        </div>
+    </div>
+    <div class="balanceDiv">
+        <div>
+            <h1 class="balanceText">Balance</h1>
+            <br>
+            <h1 id="balanceMoney" class="balanceMoney"></h1>
+        </div>
+    </div>
+    <br>
+    <div id="tableIncome" class="income"></div>
+    <div id="tableExpenses" class="expenses"></div>
+    <div id="tableBalance" class="balance"></div>
+</div>
+</body>
+<script src="js/class.js"></script>
+<script src="js/mainboard.js"></script>
+</html>

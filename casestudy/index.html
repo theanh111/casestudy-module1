@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Tree - Ứng dụng quản lý tiêu chi cá nhân</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="background">
+    <div class="logo">
+        <img src="images/logo.png" alt="Money Tree's logo" style="width: 200px">
+    </div>
+    <div class="caption">
+        <h1>WELCOME TO <span style="color: #32CD32">MONEY TREE</span></h1>
+        <h5>Personal Finance Management For <span style="color: #32CD32;">Your Future!</span></h5>
+    </div>
+    <div class="buttonArea">
+        <button class="registerBtn" onclick="registerTab()">Register</button>
+        <button class="loginBtn" onclick="loginTab()">Login</button>
+    </div>
+    <div class="copyright"><p>Good Finance Company - 2020 ©</p></div>
+</div>
+</body>
+<script>
+    function loginTab() {
+        location.href = "login.html";
+    }
+
+    function registerTab() {
+        location.href = "register.html";
+    }
+</script>
+</html>
