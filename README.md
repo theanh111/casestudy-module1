@@ -8,3 +8,5 @@
 <br>
 <h2>Module 1: Case Study</h2>
 <b>Tên dự án:</b> Personal Finance Management
+<b>Mô tả:</b> Phần mềm quản lý chi tiêu đơn giản
+<b>Thời gian hoàn thiện:</b> 3 ngày
